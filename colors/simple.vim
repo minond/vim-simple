@@ -32,7 +32,7 @@ call <SID>X("IncSearch", "black", "226", "bold")
 call <SID>X("Search", "black", "226", "bold")
 
 " Interface
-call <SID>X("ColorColumn", "none", "none", "underline")
+call <SID>X("ColorColumn", s:colBackground, "none", "underline")
 call <SID>X("CursorColumn", "none", s:colLine, "none")
 call <SID>X("CursorLine", "none", s:colLine, "none")
 call <SID>X("LineNr", s:colBackground, "none", "")
