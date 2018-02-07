@@ -100,12 +100,13 @@ call <SID>X("NERDTreeOpenable", "black", "", "")
 
 " Overrides
 call <SID>X("cssInclude", "black", "none", "none")
+call <SID>X("htmlBold", "black", "none", "bold")
 call <SID>X("htmlH1", "black", "none", "bold")
-call <SID>X("htmlItalic", "none", "none", "none")
+call <SID>X("htmlItalic", "black", "none", "bold")
 call <SID>X("htmlLink", s:colURL, "none", "bold")
 call <SID>X("makeTarget", s:colScalar, "none", "bold")
 call <SID>X("mkdInlineURL", s:colURL, "none", "bold")
-call <SID>X("mkdListItem", s:colError, "none", "bold")
+call <SID>X("mkdListItem", s:colURL, "none", "bold")
 call <SID>X("vimInsert", "black", "none", "bold")
 
 " Overrides : re-linking
