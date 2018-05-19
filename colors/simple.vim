@@ -37,7 +37,7 @@ call <SID>X('Normal', 'black', 'none', '')
 call <SID>XS(['Search', 'IncSearch'], 'black', '226', 'bold')
 
 " Interface
-call <SID>X('ColorColumn', 'none', 'none', 'underline')
+call <SID>X('ColorColumn', '253', 'none', 'underline')
 call <SID>XS(['CursorColumn', 'CursorLine'], 'none', s:colLine, 'none')
 call <SID>X('LineNr', s:colBackground, 'none', '')
 call <SID>X('MatchParen', 'black', '251', '')
