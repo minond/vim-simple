@@ -12,6 +12,8 @@ let s:colScalar = '27'
 let s:colURL = 'blue'
 
 fun <SID>X(group, fg, bg, attr)
+  exec 'hi clear ' . a:group
+
   if a:fg != ''
     exec 'hi ' . a:group . ' guifg=' . a:fg . ' ctermfg=' . a:fg
   endif
@@ -38,16 +40,21 @@ call <SID>XS(['Search', 'IncSearch'], 'black', '226', 'bold')
 
 " Interface
 call <SID>X('ColorColumn', '253', 'none', 'underline')
-call <SID>XS(['CursorColumn', 'CursorLine'], 'none', s:colLine, 'none')
 call <SID>X('LineNr', s:colBackground, 'none', '')
 call <SID>X('MatchParen', 'black', '251', '')
-call <SID>X('Pmenu', 'white', 'black', '')
 call <SID>X('SignColumn', 'black', 'none', '')
 call <SID>X('StatusLine', 'white', '33', 'bold')
 call <SID>X('StatusLineNC', 'black', '251', 'bold')
-call <SID>X('VertSplit', 'white', s:colBackground, '')
+call <SID>X('VertSplit', s:colBackground, 'white', '')
 call <SID>X('Visual', 'none', s:colLine, 'none')
 call <SID>X('WildMenu', 'black', 'none', '')
+call <SID>XS(['CursorColumn', 'CursorLine'], 'none', s:colLine, 'none')
+
+" Pmenu
+call <SID>X('Pmenu', 'black', '255', '')
+call <SID>X('PmenuSbar', 'white', '250', '')
+call <SID>X('PmenuSel', 'white', s:colScalar, '')
+call <SID>X('PmenuThumb', 'white', '246', '')
 
 " Diff
 call <SID>XS(['DiffAdd', 'diffAdded'], s:colScalar, 'none', 'bold')
