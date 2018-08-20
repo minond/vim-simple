@@ -94,7 +94,7 @@ call <SID>X('NERDTreeOpenable', 'black', '', '')
 " Overrides
 call <SID>X('makeTarget', s:colScalar, 'none', 'bold')
 call <SID>XS(['htmlLink', 'mkdInlineURL', 'mkdListItem'], s:colURL, 'none', 'bold')
-call <SID>XS(['cssInclude', 'vimInsert', 'htmlBold', 'htmlH1', 'htmlItalic'], 'black', 'none', 'bold')
+call <SID>XS(['cssInclude', 'vimInsert', 'htmlBold', 'htmlH1', 'htmlItalic'], 'black', 'none', 'underline')
 
 " Overrides : re-linking
 hi link cssAttributeSelector              cssTagName
