@@ -120,6 +120,7 @@ hi link mkdHeading                        htmlH1
 hi link mkdLink                           htmlLink
 hi link mkdSnippetEBNF                    mkdCode
 hi link mkdSnippetTEXT                    mkdCode
+hi link texItalStyle                      htmlItalic
 hi link typescriptEndColons               typescriptOpSymbols
 hi link typescriptExceptions              Exception
 hi link typescriptInterpolation           SpecialChar
