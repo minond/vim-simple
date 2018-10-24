@@ -5,11 +5,11 @@
 set background=light
 syntax reset
 
-let s:colBackground = '248'
-let s:colError = '196'
-let s:colLine = '230'
-let s:colScalar = '27'
-let s:colURL = 'blue'
+let g:SimpleColBackground = get(g:, 'SimpleColBackground', '248')
+let g:SimpleColError = get(g:, 'SimpleColError', '196')
+let g:SimpleColCurrentLine = get(g:, 'SimpleColCurrentLine', '230')
+let g:SimpleColScalar = get(g:, 'SimpleColScalar', '27')
+let g:SimpleColURL = get(g:, 'SimpleColURL', '33')
 
 fun <SID>X(group, fg, bg, attr)
   exec 'hi clear ' . a:group
@@ -39,27 +39,27 @@ call <SID>X('Normal', 'black', 'none', '')
 call <SID>XS(['Search', 'IncSearch'], 'black', '226', 'bold')
 
 " Interface
-call <SID>X('ColorColumn', '253', 'none', 'underline')
-call <SID>X('LineNr', s:colBackground, '', '')
-call <SID>X('CursorLineNR', '240', '', '')
+call <SID>X('ColorColumn', g:SimpleColBackground, 'none', 'underline')
+call <SID>X('LineNr', g:SimpleColBackground, '', '')
+call <SID>X('CursorLineNR', 'black', 'none', '')
 call <SID>X('MatchParen', 'black', '251', '')
 call <SID>X('SignColumn', 'black', 'none', '')
-call <SID>X('StatusLine', 'white', '33', 'bold')
-call <SID>X('StatusLineNC', 'black', '254', 'bold')
-call <SID>X('VertSplit', s:colBackground, 'white', '')
-call <SID>X('Visual', 'none', s:colLine, 'none')
+call <SID>X('StatusLine', 'white', g:SimpleColURL, 'bold')
+call <SID>X('StatusLineNC', 'black', '255', 'bold')
+call <SID>X('VertSplit', g:SimpleColBackground, 'none', '')
+call <SID>X('Visual', 'none', g:SimpleColCurrentLine, 'none')
 call <SID>X('WildMenu', 'black', 'none', '')
-call <SID>XS(['CursorColumn', 'CursorLine'], 'none', s:colLine, 'none')
+call <SID>XS(['CursorColumn', 'CursorLine'], 'none', g:SimpleColCurrentLine, 'none')
 
 " Pmenu
 call <SID>X('Pmenu', 'black', '255', '')
 call <SID>X('PmenuSbar', 'white', '250', '')
-call <SID>X('PmenuSel', 'white', s:colScalar, '')
+call <SID>X('PmenuSel', 'white', g:SimpleColScalar, '')
 call <SID>X('PmenuThumb', 'white', '246', '')
 
 " Diff
-call <SID>XS(['DiffAdd', 'diffAdded'], s:colScalar, 'none', 'bold')
-call <SID>XS(['DiffDelete', 'diffRemoved'], s:colError, 'none', 'bold')
+call <SID>XS(['DiffAdd', 'diffAdded'], g:SimpleColScalar, 'none', 'bold')
+call <SID>XS(['DiffDelete', 'diffRemoved'], g:SimpleColError, 'none', 'bold')
 call <SID>XS(['DiffText', 'diffLine', 'diffFile', 'diffNewFile'], 'black', 'none', 'bold')
 call <SID>X('DiffChange', '203', 'none', 'none')
 
@@ -68,32 +68,32 @@ call <SID>XS(['Conditional', 'Constant', 'Delimiter', 'Exception', 'Function', '
 call <SID>XS(['Include', 'PreProc'], 'black', 'none', 'bold')
 
 " Code : highlights
-call <SID>XS(['Todo', 'Error'], s:colError, 'none', '')
+call <SID>XS(['Todo', 'Error'], g:SimpleColError, 'none', '')
 
 " Code : comments
-call <SID>X('Comment', s:colBackground, 'none', '')
-call <SID>X('SpecialComment', s:colBackground, 'none', 'bold')
+call <SID>X('Comment', g:SimpleColBackground, 'none', '')
+call <SID>X('SpecialComment', g:SimpleColBackground, 'none', 'bold')
 
 " Code : primitives
-call <SID>XS(['Number', 'Boolean'], s:colScalar, 'none', '')
+call <SID>XS(['Number', 'Boolean'], g:SimpleColScalar, 'none', '')
 
 " Code : user types
-call <SID>XS(['Character', 'String'], s:colScalar, 'none', '')
-call <SID>X('SpecialChar', s:colScalar, 'none', 'bold')
+call <SID>XS(['Character', 'String'], g:SimpleColScalar, 'none', '')
+call <SID>X('SpecialChar', g:SimpleColScalar, 'none', 'bold')
 
 " Plugins
 call <SID>X('GitGutterAddDefault', '70', 'none', '')
-call <SID>X('GitGutterChangeDefault', s:colScalar, 'none', '')
-call <SID>X('GitGutterDeleteDefault', s:colError, 'none', '')
+call <SID>X('GitGutterChangeDefault', g:SimpleColScalar, 'none', '')
+call <SID>X('GitGutterDeleteDefault', g:SimpleColError, 'none', '')
 call <SID>X('NERDTreeClosable', 'black', '', '')
 call <SID>X('NERDTreeDir', '240', '', '')
 call <SID>X('NERDTreeDirSlash', '252', '', '')
-call <SID>X('NERDTreeExecFile', 'black', 'white', '')
+call <SID>X('NERDTreeExecFile', g:SimpleColURL, 'none', '')
 call <SID>X('NERDTreeOpenable', 'black', '', '')
 
 " Overrides
-call <SID>X('makeTarget', s:colScalar, 'none', 'bold')
-call <SID>XS(['htmlLink', 'mkdInlineURL', 'mkdListItem'], s:colURL, 'none', 'bold')
+call <SID>X('makeTarget', g:SimpleColScalar, 'none', 'bold')
+call <SID>XS(['htmlLink', 'mkdInlineURL', 'mkdListItem'], g:SimpleColURL, 'none', 'bold')
 call <SID>XS(['htmlBold'], 'black', 'none', 'bold')
 call <SID>X('htmlItalic', 'black', 'none', 'underline')
 call <SID>XS(['cssInclude', 'vimInsert', 'htmlH1'], 'black', 'none', 'bold')
