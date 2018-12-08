@@ -15,13 +15,13 @@ fun <SID>X(group, fg, bg, attr)
   exec 'hi clear ' . a:group
 
   if a:fg != ''
-    exec 'hi ' . a:group . ' guifg=' . a:fg . ' ctermfg=' . a:fg
+    exec 'hi ' . a:group . ' ctermfg=' . a:fg
   endif
   if a:bg != ''
-    exec 'hi ' . a:group . ' guibg=' . a:bg . ' ctermbg=' . a:bg
+    exec 'hi ' . a:group . ' ctermbg=' . a:bg
   endif
   if a:attr != ''
-    exec 'hi ' . a:group . ' gui=' . a:attr . ' cterm=' . a:attr
+    exec 'hi ' . a:group . ' cterm=' . a:attr
   endif
 endfun
 
