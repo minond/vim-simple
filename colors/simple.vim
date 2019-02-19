@@ -64,8 +64,8 @@ call <SID>XS(['DiffText', 'diffLine', 'diffFile', 'diffNewFile'], 'black', 'none
 call <SID>X('DiffChange', '203', 'none', 'none')
 
 " Code
-call <SID>XS(['Conditional', 'Constant', 'Delimiter', 'Exception', 'Function', 'Identifier', 'Label', 'Operator', 'Special', 'SpecialKey', 'StorageClass', 'Structure', 'Title', 'Type', 'Typedef'], 'black', 'none', '')
-call <SID>XS(['Include', 'Keyword', 'PreProc', 'Statement'], 'black', 'none', 'bold')
+call <SID>XS(['Conditional', 'Constant', 'Delimiter', 'Function', 'Identifier', 'Label', 'Operator', 'Special', 'SpecialKey', 'StorageClass', 'Structure', 'Title', 'Type', 'Typedef'], 'black', 'none', '')
+call <SID>XS(['Exception', 'Include', 'Keyword', 'PreProc', 'Statement'], 'black', 'none', 'bold')
 
 " Code : highlights
 call <SID>XS(['Todo', 'Error'], g:SimpleColError, 'none', '')
