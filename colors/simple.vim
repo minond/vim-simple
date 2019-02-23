@@ -40,8 +40,8 @@ call <SID>XS(['Search', 'IncSearch'], 'black', '226', 'bold')
 
 " Interface
 call <SID>X('ColorColumn', g:SimpleColBackground, 'none', 'underline')
-call <SID>X('LineNr', g:SimpleColBackground, '', '')
 call <SID>X('CursorLineNR', 'black', 'none', '')
+call <SID>X('LineNr', g:SimpleColBackground, '', '')
 call <SID>X('MatchParen', 'black', '251', '')
 call <SID>X('SignColumn', 'black', 'none', '')
 call <SID>X('StatusLine', 'white', g:SimpleColURL, 'bold')
@@ -58,14 +58,14 @@ call <SID>X('PmenuSel', 'white', g:SimpleColScalar, '')
 call <SID>X('PmenuThumb', 'white', '246', '')
 
 " Diff
+call <SID>X('DiffChange', '203', 'none', 'none')
 call <SID>XS(['DiffAdd', 'diffAdded'], g:SimpleColScalar, 'none', 'bold')
 call <SID>XS(['DiffDelete', 'diffRemoved'], g:SimpleColError, 'none', 'bold')
 call <SID>XS(['DiffText', 'diffLine', 'diffFile', 'diffNewFile'], 'black', 'none', 'bold')
-call <SID>X('DiffChange', '203', 'none', 'none')
 
 " Code
-call <SID>XS(['Conditional', 'Constant', 'Delimiter', 'Function', 'Identifier', 'Label', 'Operator', 'Special', 'SpecialKey', 'StorageClass', 'Structure', 'Title', 'Type', 'Typedef'], 'black', 'none', '')
-call <SID>XS(['Exception', 'Include', 'Keyword', 'PreProc', 'Statement'], 'black', 'none', 'bold')
+call <SID>XS(['Constant', 'Delimiter', 'Function', 'Identifier', 'Operator', 'Special', 'SpecialKey', 'StorageClass', 'Structure', 'Title', 'Type', 'Typedef'], 'black', 'none', '')
+call <SID>XS(['Label', 'Conditional', 'Exception', 'Include', 'Keyword', 'PreProc', 'Statement'], 'black', 'none', 'bold')
 
 " Code : highlights
 call <SID>XS(['Todo', 'Error'], g:SimpleColError, 'none', '')
@@ -78,8 +78,8 @@ call <SID>X('SpecialComment', g:SimpleColBackground, 'none', 'bold')
 call <SID>XS(['Number', 'Boolean'], g:SimpleColScalar, 'none', '')
 
 " Code : user types
-call <SID>XS(['Character', 'String'], g:SimpleColScalar, 'none', '')
 call <SID>X('SpecialChar', g:SimpleColScalar, 'none', 'bold')
+call <SID>XS(['Character', 'String'], g:SimpleColScalar, 'none', '')
 
 " Plugins
 call <SID>X('GitGutterAddDefault', '70', 'none', '')
@@ -92,11 +92,12 @@ call <SID>X('NERDTreeExecFile', g:SimpleColURL, 'none', '')
 call <SID>X('NERDTreeOpenable', 'black', '', '')
 
 " Overrides
-call <SID>X('makeTarget', g:SimpleColScalar, 'none', 'bold')
-call <SID>XS(['htmlLink', 'mkdInlineURL', 'mkdListItem'], g:SimpleColURL, 'none', 'bold')
-call <SID>XS(['htmlBold'], 'black', 'none', 'bold')
 call <SID>X('htmlItalic', 'black', 'none', 'underline')
+call <SID>X('makeTarget', g:SimpleColScalar, 'none', 'bold')
 call <SID>XS(['cssInclude', 'vimInsert', 'htmlH1'], 'black', 'none', 'bold')
+call <SID>XS(['htmlBold'], 'black', 'none', 'bold')
+call <SID>XS(['htmlLink', 'mkdInlineURL', 'mkdListItem'], g:SimpleColURL, 'none', 'bold')
+call <SID>XS(['scalaDocLinks', 'scalaCommentAnnotation'], g:SimpleColBackground, 'none', 'bold')
 
 " Overrides : re-linking
 hi link cssAttributeSelector              cssTagName
