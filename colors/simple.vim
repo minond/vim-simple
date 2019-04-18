@@ -6,7 +6,7 @@ set background=light
 syntax reset
 
 let g:SimpleColBackground = get(g:, 'SimpleColBackground', '248')
-let g:SimpleColCurrentLine = get(g:, 'SimpleColCurrentLine', '230')
+let g:SimpleColCurrentLine = get(g:, 'SimpleColCurrentLine', '255')
 let g:SimpleColError = get(g:, 'SimpleColError', '196')
 let g:SimpleColScalar = get(g:, 'SimpleColScalar', '238')
 let g:SimpleColURL = get(g:, 'SimpleColURL', '33')
@@ -44,7 +44,7 @@ call <SID>X('CursorLineNR', 'black', 'none', '')
 call <SID>X('LineNr', g:SimpleColBackground, '', '')
 call <SID>X('MatchParen', 'black', '251', '')
 call <SID>X('SignColumn', 'black', 'none', '')
-call <SID>X('StatusLine', 'white', g:SimpleColURL, 'bold')
+call <SID>X('StatusLine', 'white', '27', 'bold')
 call <SID>X('StatusLineNC', 'black', '255', 'bold')
 call <SID>X('VertSplit', g:SimpleColBackground, 'none', '')
 call <SID>X('Visual', 'none', g:SimpleColCurrentLine, 'none')
