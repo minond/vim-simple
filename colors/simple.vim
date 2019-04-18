@@ -57,6 +57,9 @@ call <SID>X('PmenuSbar', 'white', '250', '')
 call <SID>X('PmenuSel', 'white', g:SimpleColScalar, '')
 call <SID>X('PmenuThumb', 'white', '246', '')
 
+" Spell
+call <SID>X('SpellCap', 'none', 'none', '')
+
 " Diff
 call <SID>X('DiffChange', '203', 'none', 'none')
 call <SID>XS(['DiffAdd', 'diffAdded'], g:SimpleColScalar, 'none', 'bold')
