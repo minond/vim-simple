@@ -49,6 +49,7 @@ call <SID>X('StatusLineNC', 'black', '255', 'bold')
 call <SID>X('VertSplit', g:SimpleColBackground, 'none', '')
 call <SID>X('Visual', 'none', g:SimpleColCurrentLine, 'none')
 call <SID>X('WildMenu', 'black', 'none', '')
+call <SID>X('FoldColumn', 'none', 'none', '')
 call <SID>XS(['CursorColumn', 'CursorLine'], 'none', g:SimpleColCurrentLine, 'none')
 
 " Pmenu
