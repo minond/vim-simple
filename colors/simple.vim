@@ -36,7 +36,7 @@ call <SID>X('NonText', '243', 'none', '')
 call <SID>X('Normal', 'black', 'none', '')
 
 " Search
-call <SID>XS(['Search', 'IncSearch'], 'black', '226', 'bold')
+call <SID>XS(['Search', 'IncSearch'], 'black', '226', '')
 
 " Interface
 call <SID>X('ColorColumn', g:SimpleColBackground, 'none', 'underline')
@@ -44,8 +44,8 @@ call <SID>X('CursorLineNR', 'black', 'none', '')
 call <SID>X('LineNr', g:SimpleColBackground, '', '')
 call <SID>X('MatchParen', 'black', '251', '')
 call <SID>X('SignColumn', 'black', 'none', '')
-call <SID>X('StatusLine', 'white', '27', 'bold')
-call <SID>X('StatusLineNC', 'black', '255', 'bold')
+call <SID>X('StatusLine', 'white', '27', '')
+call <SID>X('StatusLineNC', 'black', '255', '')
 call <SID>X('VertSplit', g:SimpleColBackground, 'none', '')
 call <SID>X('Visual', 'none', g:SimpleColCurrentLine, 'none')
 call <SID>X('WildMenu', 'black', 'none', '')
@@ -63,26 +63,26 @@ call <SID>X('SpellCap', 'none', 'none', '')
 
 " Diff
 call <SID>X('DiffChange', '203', 'none', 'none')
-call <SID>XS(['DiffAdd', 'diffAdded'], g:SimpleColScalar, 'none', 'bold')
-call <SID>XS(['DiffDelete', 'diffRemoved'], g:SimpleColError, 'none', 'bold')
-call <SID>XS(['DiffText', 'diffLine', 'diffFile', 'diffNewFile'], 'black', 'none', 'bold')
+call <SID>XS(['DiffAdd', 'diffAdded'], g:SimpleColScalar, 'none', '')
+call <SID>XS(['DiffDelete', 'diffRemoved'], g:SimpleColError, 'none', '')
+call <SID>XS(['DiffText', 'diffLine', 'diffFile', 'diffNewFile'], 'black', 'none', '')
 
 " Code
 call <SID>XS(['Constant', 'Delimiter', 'Function', 'Identifier', 'Operator', 'Special', 'SpecialKey', 'StorageClass', 'Structure', 'Title', 'Type', 'Typedef'], 'black', 'none', '')
-call <SID>XS(['Label', 'Conditional', 'Exception', 'Include', 'Keyword', 'PreProc', 'Statement'], 'black', 'none', 'bold')
+call <SID>XS(['Label', 'Conditional', 'Exception', 'Include', 'Keyword', 'PreProc', 'Statement'], 'black', 'none', '')
 
 " Code : highlights
 call <SID>XS(['Todo', 'Error'], g:SimpleColError, 'none', '')
 
 " Code : comments
 call <SID>X('Comment', g:SimpleColBackground, 'none', '')
-call <SID>X('SpecialComment', g:SimpleColBackground, 'none', 'bold')
+call <SID>X('SpecialComment', g:SimpleColBackground, 'none', '')
 
 " Code : primitives
 call <SID>XS(['Number', 'Boolean'], g:SimpleColScalar, 'none', '')
 
 " Code : user types
-call <SID>X('SpecialChar', g:SimpleColScalar, 'none', 'bold')
+call <SID>X('SpecialChar', g:SimpleColScalar, 'none', '')
 call <SID>XS(['Character', 'String'], g:SimpleColScalar, 'none', '')
 
 " Plugins
@@ -97,11 +97,11 @@ call <SID>X('NERDTreeOpenable', 'black', '', '')
 
 " Overrides
 call <SID>X('htmlItalic', 'black', 'none', 'underline')
-call <SID>X('makeTarget', g:SimpleColScalar, 'none', 'bold')
-call <SID>XS(['cssInclude', 'vimInsert', 'htmlH1'], 'black', 'none', 'bold')
-call <SID>XS(['htmlBold'], 'black', 'none', 'bold')
-call <SID>XS(['htmlLink', 'mkdInlineURL', 'mkdListItem'], g:SimpleColURL, 'none', 'bold')
-call <SID>XS(['scalaDocLinks', 'scalaCommentAnnotation'], g:SimpleColBackground, 'none', 'bold')
+call <SID>X('makeTarget', g:SimpleColScalar, 'none', '')
+call <SID>XS(['cssInclude', 'vimInsert', 'htmlH1'], 'black', 'none', '')
+call <SID>XS(['htmlBold'], 'black', 'none', '')
+call <SID>XS(['htmlLink', 'mkdInlineURL', 'mkdListItem'], g:SimpleColURL, 'none', '')
+call <SID>XS(['scalaDocLinks', 'scalaCommentAnnotation'], g:SimpleColBackground, 'none', '')
 
 " Overrides : re-linking
 hi link cssAttributeSelector              cssTagName
