@@ -6,7 +6,7 @@ set background=light
 syntax reset
 
 let g:SimpleColBackground = get(g:, 'SimpleColBackground', '248')
-let g:SimpleColCurrentLine = get(g:, 'SimpleColCurrentLine', '255')
+let g:SimpleColCurrentLine = get(g:, 'SimpleColCurrentLine', '230')
 let g:SimpleColError = get(g:, 'SimpleColError', '196')
 let g:SimpleColScalar = get(g:, 'SimpleColScalar', '238')
 let g:SimpleColURL = get(g:, 'SimpleColURL', '33')
