@@ -9,7 +9,7 @@ let g:SimpleColBackground = get(g:, 'SimpleColBackground', '248')
 let g:SimpleColCurrentLine = get(g:, 'SimpleColCurrentLine', '230')
 let g:SimpleColError = get(g:, 'SimpleColError', '196')
 let g:SimpleColScalar = get(g:, 'SimpleColScalar', '238')
-let g:SimpleColURL = get(g:, 'SimpleColURL', '33')
+let g:SimpleColURL = get(g:, 'SimpleColURL', '20')
 
 fun <SID>X(group, fg, bg, attr)
   exec 'hi clear ' . a:group
@@ -98,9 +98,8 @@ call <SID>X('NERDTreeOpenable', 'black', '', '')
 " Overrides
 call <SID>X('htmlItalic', 'black', 'none', 'underline')
 call <SID>X('makeTarget', g:SimpleColScalar, 'none', '')
-call <SID>XS(['cssInclude', 'vimInsert', 'htmlH1'], 'black', 'none', '')
-call <SID>XS(['htmlBold'], 'black', 'none', '')
-call <SID>XS(['htmlLink', 'mkdInlineURL', 'mkdListItem'], g:SimpleColURL, 'none', '')
+call <SID>XS(['cssInclude', 'vimInsert', 'htmlH1', 'htmlBold', 'mkdListItem'], 'black', 'none', 'bold')
+call <SID>XS(['htmlLink', 'mkdInlineURL'], g:SimpleColURL, 'none', '')
 call <SID>XS(['scalaDocLinks', 'scalaCommentAnnotation'], g:SimpleColBackground, 'none', '')
 
 " Overrides : re-linking
