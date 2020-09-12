@@ -124,6 +124,8 @@ hi link mkdHeading                        htmlH1
 hi link mkdLink                           htmlLink
 hi link mkdSnippetEBNF                    mkdCode
 hi link mkdSnippetTEXT                    mkdCode
+hi link scalaCommentCodeBlock             Comment
+hi link scalaDocLinks                     Comment
 hi link tsxCloseString                    tsxTagName
 hi link typescriptEndColons               typescriptOpSymbols
 hi link typescriptExceptions              Exception
