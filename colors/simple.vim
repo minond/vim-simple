@@ -6,7 +6,7 @@ set background=light
 syntax reset
 
 let g:SimpleColBackground = get(g:, 'SimpleColBackground', '248')
-let g:SimpleColCurrentLine = get(g:, 'SimpleColCurrentLine', '230')
+let g:SimpleColCurrentLine = get(g:, 'SimpleColCurrentLine', '229')
 let g:SimpleColError = get(g:, 'SimpleColError', '196')
 let g:SimpleColScalar = get(g:, 'SimpleColScalar', '238')
 let g:SimpleColURL = get(g:, 'SimpleColURL', '20')
@@ -36,7 +36,7 @@ call <SID>X('NonText', '243', 'none', '')
 call <SID>X('Normal', 'black', 'none', '')
 
 " Search
-call <SID>XS(['Search', 'IncSearch'], 'black', '226', '')
+call <SID>XS(['Search', 'IncSearch'], 'black', '226', 'underline')
 
 " Interface
 call <SID>X('ColorColumn', g:SimpleColBackground, 'none', 'underline')
@@ -47,7 +47,7 @@ call <SID>X('SignColumn', 'black', 'none', '')
 call <SID>X('StatusLine', 'black', '255', 'bold')
 call <SID>X('StatusLineNC', 'black', '255', '')
 call <SID>X('VertSplit', g:SimpleColBackground, 'none', '')
-call <SID>X('Visual', 'none', g:SimpleColCurrentLine, 'none')
+call <SID>X('Visual', 'none', g:SimpleColCurrentLine, '')
 call <SID>X('WildMenu', 'black', 'none', '')
 call <SID>X('FoldColumn', 'none', 'none', '')
 call <SID>XS(['CursorColumn', 'CursorLine'], 'none', g:SimpleColCurrentLine, 'none')
