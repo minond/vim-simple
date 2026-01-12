@@ -33,7 +33,7 @@ endfun
 
 " Global
 call <SID>X('NonText', '243', 'none', '')
-call <SID>X('Normal', 'black', 'none', '')
+call <SID>X('Normal', 'black', '231', '')
 
 " Search
 call <SID>XS(['Search', 'IncSearch'], 'black', '226', 'underline')
@@ -44,8 +44,8 @@ call <SID>X('CursorLineNR', 'black', 'none', '')
 call <SID>X('LineNr', g:SimpleColBackground, '', '')
 call <SID>X('MatchParen', 'black', '251', '')
 call <SID>X('SignColumn', 'black', 'none', '')
-call <SID>X('StatusLine', 'black', '255', 'bold')
-call <SID>X('StatusLineNC', 'black', '255', '')
+call <SID>X('StatusLine', 'black', '195', 'bold')
+call <SID>X('StatusLineNC', 'black', '195', '')
 call <SID>X('VertSplit', g:SimpleColBackground, 'none', '')
 call <SID>X('Visual', 'none', g:SimpleColCurrentLine, '')
 call <SID>X('WildMenu', 'black', 'none', '')
