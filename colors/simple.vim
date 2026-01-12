@@ -33,7 +33,7 @@ endfun
 
 " Global
 call <SID>X('NonText', '243', 'none', '')
-call <SID>X('Normal', 'black', '231', '')
+call <SID>X('Normal', 'black', 'none', '')
 
 " Search
 call <SID>XS(['Search', 'IncSearch'], 'black', '226', 'underline')
